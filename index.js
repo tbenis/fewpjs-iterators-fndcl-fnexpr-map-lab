@@ -14,18 +14,35 @@ const tutorials = [
 const titleCased = () => {
   // use the .map method on the tutorials to return a new array
 
-  tutorials.map(function (tutorial) {
-    const eachArr = tutorial[0].split(" ");
-    eachArr[0][0].toUpperCase;
-    eachArr.join(" ");
+  // tutorials.map(function (tutorial) {
+  //   const eachArr = tutorial[0].split(" ");
+  //   eachArr[0][0].toUpperCase;
+  //   eachArr.join(" ");
 
-    //  tutorial.split(" ")[0].toLocaleUpperCase().join(" ")
-    })
-  return tutorials
+  //   //  tutorial.split(" ")[0].toLocaleUpperCase().join(" ")
+  //   })
+  // return tutorials
+
+  // Sol:
+  return tutorials.map(title => {
+    const words = title.split(' ');
+    const capitalizedWords =
+      words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+    const newTitle = capitalizedWords.join(' ');
+    return newTitle;
+  });
 }
 
 /*
   const newArr = [['what'] ['does'] ['the'] ['this'] ['keyword'] ['mean?']',
   [0].toUpperCase();
 
+  Sol:
+  return tutorials.map(title => {
+    const words = title.split(' ');
+    const capitalizedWords =
+      words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+    const newTitle = capitalizedWords.join(' ');
+    return newTitle;
+  });
 */
