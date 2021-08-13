@@ -13,5 +13,19 @@ const tutorials = [
 
 const titleCased = () => {
   // use the .map method on the tutorials to return a new array
+
+  tutorials.map(function (tutorial) {
+    const eachArr = tutorial[0].split(" ");
+    eachArr[0][0].toUpperCase;
+    eachArr.join(" ");
+
+    //  tutorial.split(" ")[0].toLocaleUpperCase().join(" ")
+    })
   return tutorials
 }
+
+/*
+  const newArr = [['what'] ['does'] ['the'] ['this'] ['keyword'] ['mean?']',
+  [0].toUpperCase();
+
+*/
